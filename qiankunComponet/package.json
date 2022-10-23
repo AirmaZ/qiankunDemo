@@ -1,0 +1,58 @@
+{
+  "name": "hihis-fe-medBill",
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "prepare": "husky install",
+    "lint": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0 --fix"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@ant-design/pro-layout": "^6.5.0",
+    "antd": "^4.19.5",
+    "axios": "^0.26.1",
+    "classnames": "^2.3.1",
+    "eslint-webpack-plugin": "^3.1.1",
+    "lodash": "^4.17.21",
+    "mobx": "^6.5.0",
+    "mobx-react": "^7.3.0",
+    "moment": "^2.29.3",
+    "nunjucks": "^3.2.3",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "umi": "^3.5.23"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "@umijs/plugin-qiankun": "^2.37.2",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.5.23",
+    "eslint": "^8.13.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2"
+  }
+}

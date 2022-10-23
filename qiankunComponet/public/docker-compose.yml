@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  hihis-fe-med-bill:
+    image: dockerhub.kubekey.local/hihis/hihis-fe-med-bill:1.0.0-SNAPSHOT
+    environment:
+      - TZ=Asia/Shanghai
+    command: ["/bin/sh", "-c", "/startup.sh"]
+    volumes:
+      - "/home/bsoft/static/hihis-fe-medBill:/hihis-fe-medBill"
